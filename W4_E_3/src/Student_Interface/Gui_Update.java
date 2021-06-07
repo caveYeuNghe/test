@@ -130,7 +130,7 @@ public class Gui_Update extends javax.swing.JFrame {
             }
         });
 
-        JRB_Female.setText("Nam");
+        JRB_Female.setText("Nữ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -245,6 +245,7 @@ public class Gui_Update extends javax.swing.JFrame {
 
             Gender = false;
         }
+        //daihdioas
         double mark = Double.parseDouble(JTF_Mark.getText());
         ps.update(ID, Name, ClassID, Gender, mark);
         dtm.setRowCount(0);

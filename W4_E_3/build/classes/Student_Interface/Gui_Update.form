@@ -226,7 +226,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="JRB_Female">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Nam"/>
+        <Property name="text" type="java.lang.String" value="N&#x1eef;"/>
       </Properties>
     </Component>
   </SubComponents>
