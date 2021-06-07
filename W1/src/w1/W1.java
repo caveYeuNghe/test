@@ -58,6 +58,19 @@ public class W1 {
                 return x2.compareTo(x1);
             }
         });
+
+        books.sort((book, t1) -> (int)(book.getPrice() - t1.getPrice()));
+
+        for (int i = 0; i < n -1; ++i) {
+            int min_idx = i;
+            for (int j = i + 1; j < n; j++)
+                if (books.get(i).getPrice() < books.get(min_idx).getPrice())
+                    min_idx = i;
+            Book tmp = books.get(i);
+            books.set(i, books.get(min_idx));
+            books.set(min_idx, tmp);
+        }
+
         for (Book b : books)
         {
             System.out.println(b.toString());
