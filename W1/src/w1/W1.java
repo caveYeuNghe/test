@@ -42,22 +42,28 @@ public class W1 {
         for (int i = 0; i < 1; i++) {
             System.out.println(books.toString());
         }
-//        for (int i = 0; i < n + 1; i++) {
-//            for (int j = i + 1; j < n; j++) {
-//                if (books.get(i).getPrice() > books.get(j).getPrice()) {
-//                    Book temp = books.get(i);
-//                    books.get(i) = books.get(j);
-//                }
-//
+//       
+//        Collections.sort(books, new Comparator() {
+//            @Override
+//            public int compare(Object o1, Object o2) {
+//                Double x1 = ((Book) o1).getPrice();
+//                Double x2 = ((Book) o2).getPrice();
+//                return x2.compareTo(x1);
+//                
 //            }
-        Collections.sort(books, new Comparator() {
-            @Override
-            public int compare(Object o1, Object o2) {
-                Double x1 = ((Book) o1).getPrice();
-                Double x2 = ((Book) o2).getPrice();
-                return x2.compareTo(x1);
-            }
-        });
+//        });
+//        for (Book b : books) {
+//            System.out.println(b.toString());
+//        }
+        for (int i = 0; i < n -1; ++i) {
+            int min_idx = i;
+            for (int j = i + 1; j < n; j++)
+                if (books.get(i).getPrice() < books.get(min_idx).getPrice())
+                    min_idx = i;
+            Book tmp = books.get(i);
+            books.set(i, books.get(min_idx));
+            books.set(min_idx, tmp);
+        }
         for (Book b : books)
         {
             System.out.println(b.toString());
