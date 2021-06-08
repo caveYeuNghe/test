@@ -52,6 +52,7 @@ public class MyFiction implements IFiction {
 //            }
 //        }
 //        System.out.println(max.toString());
+        // testing
 
         int max = getMax();
         flist.stream().filter(fiction -> {
