@@ -19,8 +19,8 @@ public class JavaApplication6 {
      */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        MyFiction mf = new MyFiction();
         int n = sc.nextInt();
+        MyFiction mf = new MyFiction(n);
         sc.nextLine();
         for (int i = 0; i < n; i++) {
             System.out.println("ID: ");
@@ -33,9 +33,9 @@ public class JavaApplication6 {
             int y = sc.nextInt();
             sc.nextLine();
             System.out.println("Price");
-            double price = sc.nextDouble();
+            int price = sc.nextInt();
             sc.nextLine();
-            Book book = new Fiction(y, price, id, name, p);
+            Book book = new Fiction(id, name, p, y, price);
             mf.addFiction((Fiction) book);
         }
         mf.printMax();

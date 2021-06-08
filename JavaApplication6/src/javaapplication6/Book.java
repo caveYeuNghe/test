@@ -10,7 +10,7 @@ package javaapplication6;
  * @author Tom
  */
 public class Book {
-    String ID, Name, Publisher;
+    private String ID, Name, Publisher;
 
     public String getID() {
         return ID;
@@ -41,5 +41,7 @@ public class Book {
         this.Name = Name;
         this.Publisher = Publisher;
     }
-   
+
+    public Book() {    //đề bài yêu cầu implicit constructor nữa thằng ngu, thầy m ngu tiếng anh vl
+    }
 }
