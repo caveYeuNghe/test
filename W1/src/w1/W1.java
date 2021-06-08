@@ -51,22 +51,50 @@ public class W1 {
 //                return x2.compareTo(x1);
 //                
 //            }
+
 //        });
 //        for (Book b : books) {
 //            System.out.println(b.toString());
-//        }
-        for (int i = 0; i < n -1; ++i) {
-            int min_idx = i;
-            for (int j = i + 1; j < n; j++)
-                if (books.get(i).getPrice() < books.get(min_idx).getPrice())
-                    min_idx = i;
-            Book tmp = books.get(i);
-            books.set(i, books.get(min_idx));
-            books.set(min_idx, tmp);
+////        }
+//        Collections.sort(books, new Comparator() {
+//            @Override
+//            public int compare(Object o1, Object o2) {
+//                Double x1 = ((Book) o1).getPrice();
+//                Double x2 = ((Book) o2).getPrice();
+//                return x2.compareTo(x1);
+//            }
+//        });
+//
+//        books.sort((book, t1) -> (int) (book.getPrice() - t1.getPrice()));
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (books.get(i).getPrice() > books.get(j).getPrice()) {
+                    Book tmp = books.get(i);
+                    books.set(i, books.get(j));
+                    books.set(j, tmp);
+                } else if (books.get(i).getPrice() == books.get(j).getPrice()) {
+                    if ((books.get(i).getName().compareTo(books.get(j).getName()) > 0)) {
+                        Book tmp = books.get(i);
+                        books.set(i, books.get(j));
+                        books.set(j, tmp);
+                    }
+                }
+
+            }
+
         }
-        for (Book b : books)
-        {
+
+        for (Book b : books) {
             System.out.println(b.toString());
         }
+//        String hello = "hjahjadkhdjk13212312";
+//    for(int i = 0; i < hello.length(); i++)
+//    {
+//       if(Character.isDigit(hello.charAt(i)))
+//       {
+//          
+//       }
+//    }
     }
+
 }

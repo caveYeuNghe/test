@@ -1,4 +1,6 @@
-/Test/nbproject/private/
-/Test/build/
-/W1/nbproject/private/
-/W1/build/
+/nbproject
+/build
+*.xml
+*.mf
+*.iml
+/JavaApplication6/nbproject/private/
