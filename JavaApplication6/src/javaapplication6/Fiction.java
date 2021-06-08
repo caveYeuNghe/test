@@ -11,8 +11,8 @@ package javaapplication6;
  */
 public class Fiction extends Book {
 
-    int year;
-    double price;
+    private int year;   // mẹ mày cho mấy cái thuộc tính private hộ cái
+    private int price;  // double cái lồn
 
     public int getYear() {
         return year;
@@ -22,22 +22,26 @@ public class Fiction extends Book {
         this.year = year;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
-    public Fiction(int year, double price, String ID, String Name, String Publisher) {
+    public Fiction(String ID, String Name, String Publisher, int year, int price) {
         super(ID, Name, Publisher);
         this.year = year;
         this.price = price;
     }
 
-    public Fiction(String ID, String Name, String Publisher) {
-        super(ID, Name, Publisher);
+    // con cặc gì đây
+//    public Fiction(String ID, String Name, String Publisher) {
+//        super(ID, Name, Publisher);
+//    }
+
+    public Fiction() {  //đề bài yêu cầu implicit constructor nữa thằng ngu
     }
 
     public double Total() {
@@ -53,7 +57,7 @@ public class Fiction extends Book {
     @Override
     public String toString() {
         String result = "";
-        result = ID + "\t" + Name + "\t" + Publisher + "\t" + price + "\t" + year + Total();
+        result = super.getID() + "\t" + super.getName() + "\t" + super.getPublisher() + "\t" + price + "\t" + year + Total();
         return result;
     }
 

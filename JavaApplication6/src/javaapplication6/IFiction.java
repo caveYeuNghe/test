@@ -12,7 +12,7 @@ public interface IFiction {
 
     void addFiction(Fiction f);
 
-    void getMax();
+    int getMax();
 
     void printMax();
 }

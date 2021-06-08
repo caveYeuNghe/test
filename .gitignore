@@ -3,6 +3,7 @@
 *.xml
 *.mf
 *.iml
+.idea
 /JavaApplication6/nbproject/private/
 /JavaApplication6/build/
 /TTest/nbproject/private/
