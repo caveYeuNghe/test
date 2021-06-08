@@ -4,14 +4,15 @@
  * and open the template in the editor.
  */
 package javaapplication6;
-import java.sql.SQLException;
-
 /**
  *
  * @author Tom
  */
 public interface IFiction {
-    void addFiction(Fiction f) throws SQLException;
+
+    void addFiction(Fiction f);
+
     void getMax();
+
     void printMax();
 }

@@ -4,3 +4,8 @@
 *.mf
 *.iml
 /JavaApplication6/nbproject/private/
+/JavaApplication6/build/
+/TTest/nbproject/private/
+/TTest/build/
+/JavaApplication8/nbproject/private/
+/JavaApplication8/build/

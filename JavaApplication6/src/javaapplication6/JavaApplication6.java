@@ -6,6 +6,7 @@
 package javaapplication6;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -17,8 +18,27 @@ public class JavaApplication6 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       MyFiction mf = new MyFiction();   
-       mf.addFiction();
+        Scanner sc = new Scanner(System.in);
+        MyFiction mf = new MyFiction();
+        int n = sc.nextInt();
+        sc.nextLine();
+        for (int i = 0; i < n; i++) {
+            System.out.println("ID: ");
+            String id = sc.nextLine();
+            System.out.println("Name: ");
+            String name = sc.nextLine();
+            System.out.println("Publisher: ");
+            String p = sc.nextLine();
+            System.out.println("Year");
+            int y = sc.nextInt();
+            sc.nextLine();
+            System.out.println("Price");
+            double price = sc.nextDouble();
+            sc.nextLine();
+            Book book = new Fiction(y, price, id, name, p);
+            mf.addFiction((Fiction) book);
+        }
+        mf.printMax();
     }
-    
+
 }

@@ -14,8 +14,6 @@ public class Fiction extends Book {
     int year;
     double price;
 
-  
-
     public int getYear() {
         return year;
     }
@@ -59,5 +57,4 @@ public class Fiction extends Book {
         return result;
     }
 
-    
 }
