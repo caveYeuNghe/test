@@ -1,12 +1,6 @@
-/nbproject
-/build
+*/nbproject
+*/build
 *.xml
 *.mf
 *.iml
 .idea
-/JavaApplication6/nbproject/private/
-/JavaApplication6/build/
-/TTest/nbproject/private/
-/TTest/build/
-/JavaApplication8/nbproject/private/
-/JavaApplication8/build/
